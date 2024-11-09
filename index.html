@@ -61,10 +61,9 @@
             height: 20rem;
             background-color: #8B5CF6;
             border-radius: 50%;
-            mix-blend-mode: multiply;
-            filter: blur(150px);
+            /* filter: blur(150px); */
             opacity: 0.7;
-            animation: blobPurpleAnimation 6s infinite;
+            animation: blobAnimation 6s infinite;
         }
 
         .blobAmber {
@@ -75,10 +74,9 @@
             height: 20rem;
             background-color: #F59E0B;
             border-radius: 50%;
-            mix-blend-mode: multiply;
-            filter: blur(150px);
+            /* filter: blur(150px); */
             opacity: 0.7;
-            animation: blobAmberAnimation 6s infinite;
+            animation: blobAnimation 6s infinite;
         }
 
         .blobGreen {
@@ -89,10 +87,9 @@
             height: 20rem;
             background-color: #10B981;
             border-radius: 50%;
-            mix-blend-mode: multiply;
-            filter: blur(150px);
+            /* filter: blur(150px); */
             opacity: 0.7;
-            animation: blobGreenAnimation 6s infinite;
+            animation: blobAnimation 6s infinite;
         }
 
         .blobBlue {
@@ -103,49 +100,12 @@
             height: 20rem;
             background-color: #3B82F6;
             border-radius: 50%;
-            mix-blend-mode: multiply;
-            filter: blur(150px);
+            /* filter: blur(150px); */
             opacity: 0.7;
-            animation: blobBlueAnimation 6s infinite;
+            animation: blobAnimation 6s infinite;
         }
 
-        @keyframes blobPurpleAnimation {
-
-            0%,
-            100% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.1);
-            }
-        }
-
-        @keyframes blobAmberAnimation {
-
-            0%,
-            100% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.1);
-            }
-        }
-
-        @keyframes blobGreenAnimation {
-
-            0%,
-            100% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.1);
-            }
-        }
-
-        @keyframes blobBlueAnimation {
+        @keyframes blobAnimation {
 
             0%,
             100% {
@@ -199,17 +159,15 @@
         }
 
         .about-section {
+            padding: 2rem 3rem;
             position: relative;
-            top: -50px;
-            /* margin: auto; */
-            margin: 0 50px;
-            padding: 3.5rem 4.5rem;
             display: flex;
             flex-wrap: wrap;
             background-color: #FDE68A;
             border-radius: 20px;
             position: relative;
             /* max-width: 1200px; */
+            margin-bottom: 20px;
         }
 
         @media (min-width: 1400px) {
@@ -244,7 +202,7 @@
         }
 
         .about-section .title {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 600;
             letter-spacing: -3px;
             display: flex;
@@ -258,20 +216,20 @@
 
         .about-section .content-text {
             width: 100%;
-            font-family: 'poppins';
-            font-size: 1.1rem;
+            font-family: 'poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 14px;
             font-weight: 500;
             line-height: 1.5;
         }
 
         .member-section {
-            font-family: 'poppins';
+            font-family: 'poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0 50px;
         }
 
         .member-section .member-wrapper {
             width: 100%;
-            padding: 0 3rem;
+            padding: 0 0rem;
         }
 
         .member-section .member-item {
@@ -281,11 +239,6 @@
             align-items: center;
         }
 
-        .member-section .member-item:nth-child(even) {
-            justify-content: end;
-            flex-direction: row-reverse;
-        }
-
         .member-section .member-item div:nth-child(1) {
             display: flex;
             justify-content: center;
@@ -293,7 +246,40 @@
         }
 
         .member-section .member-item div:nth-child(2) {
-            width: 45%;
+            width: 100%;
+        }
+
+        @media (min-width: 900px) {
+            .about-section {
+                top: -50px;
+                padding: 3rem 4rem;
+                /* margin: auto; */
+                font-size: 10px;
+                margin: 0 50px;
+            }
+
+            .about-section .title {
+                font-size: 3rem;
+                padding: 0 2.25rem;
+                margin: 0 50px;
+            }
+
+            .about-section .content-text {
+                font-size: 1.1rem;
+            }
+
+            .member-section .member-wrapper {
+                padding: 0 3rem;
+            }
+
+            .member-section .member-item:nth-child(even) {
+                justify-content: end;
+                flex-direction: row-reverse;
+            }
+
+            .member-section .member-item div:nth-child(2) {
+                width: 45%;
+            }
         }
 
         .member-section .member-item svg {
@@ -346,7 +332,7 @@
         }
 
         .footer-section {
-            font-family: 'poppins';
+            font-family: 'poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 50px;
             margin-bottom: 25px;
             padding: 1.5rem 2.5rem;
@@ -396,7 +382,7 @@
     </div>
 
     <div class="member-section">
-        <h1 style="padding: 0 2.25rem; margin: 0 50px;">Anggota Kelompok</h1>
+        <h1 class="title">Anggota Kelompok</h1>
         <div class="member-wrapper">
             <div class="member-item">
                 <div>
@@ -415,7 +401,7 @@
                         situasi
                         sulit.
                     </p>
-                    <a class="link">
+                    <a class="link" href="./farras/index.html">
                         <p>Lihat Biodata</p>
                         <p class="arrow">
                             <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -442,7 +428,7 @@
                         Cerdas dan tangkas, Arief selalu satu langkah di depan. Kemampuan analitisnya membuatnya andal
                         dalam merencanakan strategi dan mengambil keputusan.
                     </p>
-                    <a class="link" href="./pages/arief/index.html">
+                    <a class="link" href="./arief/index.html">
                         <p>Lihat Biodata</p>
                         <p class="arrow">
                             <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -469,7 +455,7 @@
                         Ahli strategi yang cerdik dan tenang. Dengan insting tajam dan kepeduliannya, ia menjadi perekat
                         tim dan menjaga keharmonisan di antara anggota.
                     </p>
-                    <a class="link" href="./pages/hilmi/index.html">
+                    <a class="link" href="./hilmi/index.html">
                         <p>Lihat Biodata</p>
                         <p class="arrow">
                             <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -496,7 +482,7 @@
                         Sumber semangat bagi tim. Meski santai, ia tangguh dan memiliki kemampuan bertarung yang luar
                         biasa.
                     </p>
-                    <a class="link" href="./pages/tamam/Template.html">
+                    <a class="link" href="./tamam/Template.html">
                         <p>Lihat Biodata</p>
                         <p class="arrow">
                             <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -524,7 +510,7 @@
                         tinggi, ia selalu siap menghadapi rintangan berat dan menjadi tumpuan tim dalam situasi yang
                         membutuhkan ketahanan maksimal.
                     </p>
-                    <a class="link" href="./pages/fawwaz/index.html">
+                    <a class="link" href="./fawwaz/index.html">
                         <p>Lihat Biodata</p>
                         <p class="arrow">
                             <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -543,7 +529,7 @@
         <p style="color: gray; font-size: 15px;">*Deskripsi yang ditulis diatas adalah fiksi</p>
     </div>
 
-    <footer style="text-align: center; color: gray; font-family: poppins; margin-bottom: 25px;">
+    <footer style="text-align: center; color: gray; font-family: poppins; margin-bottom: 25px; font-size: 14px;">
         <p>Copyright &copy; <span class="year">2024</span> Farras Fadhil Syafiq. All rights reserved</p>
     </footer>
 </body>
