@@ -1,0 +1,114 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    gap: 20px;
+}
+
+body {
+    background-image: linear-gradient(to right, rgba(255,0,0,0), #FF4545);
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+}
+
+.judul-bio {
+    background-color: #FF9C73;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.deskripsi {
+    
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #FBD288;
+    width: fit-content;
+    margin-bottom: 20px;
+}
+
+.tabell {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    width: 80%; /* Atur lebar kontainer tabel */
+    justify-content: center;
+    border-radius:15px;
+}
+
+.tabel-container, .tabel-pendidikan {
+    flex: 1;
+    width: 45%; /* Agar tabel kanan dan kiri sama lebar */
+    margin: 0;
+}
+
+.ket {
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #FF9C73;
+    width: fit-content;
+    margin-bottom: 20px;
+}
+
+table {
+    background-color: #FF9C73;
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+td, th {
+    border-radius: 15px;
+    border: 5px solid #000000;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Efek hover untuk seluruh baris */
+table tr:hover {
+    background-color: #FFF8DE;
+    cursor: pointer;
+}
+
+/* Efek hover untuk setiap sel */
+table td:hover, table th:hover {
+    background-color: #D0E8C5;
+}
+
+.judul-tabel {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.judul-list {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+/* Untuk meletakkan gambar di tengah dan memberikan border yang sesuai */
+.gambar {
+    display: flex;
+    justify-content: center; /* Memusatkan gambar di dalam container */
+    align-items: center;
+    border: 5px solid #FFB6B6; /* Warna border lebih lembut */
+    background-color: #FF9C73; /* Warna background sesuai tema */
+    border-radius: 15px; /* Tambahkan sedikit border-radius agar lebih lembut */
+    padding: 10px;
+    width: fit-content;
+    margin: 0 auto; /* Memusatkan gambar di dalam halaman */
+}
+
+img {
+    width: 200px; /* Atur lebar gambar sesuai kebutuhan */
+    height: auto;
+    border-radius: 10px; /* Sesuaikan dengan bentuk gambar */
+}

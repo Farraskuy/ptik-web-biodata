@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PeTe I KAI | Kelompok 2 PTIK 1A D3</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('.year').innerHTML = new Date().getFullYear();
+        });
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        ::-webkit-scrollbar {
+            width: 12px;
+            height: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: white;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            border: 2.5px solid white;
+            background: #888;
+            border-radius: 15px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(255 198 135 / 10%);
+        }
+
+        .container {
+            position: absolute;
+            z-index: 0;
+            min-height: 100vh;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .blobPurple {
+            position: absolute;
+            top: -8rem;
+            left: -10rem;
+            width: 20rem;
+            height: 20rem;
+            background-color: #8B5CF6;
+            border-radius: 50%;
+            mix-blend-mode: multiply;
+            filter: blur(150px);
+            opacity: 0.7;
+            animation: blobPurpleAnimation 6s infinite;
+        }
+
+        .blobAmber {
+            position: absolute;
+            top: 8rem;
+            left: -18rem;
+            width: 20rem;
+            height: 20rem;
+            background-color: #F59E0B;
+            border-radius: 50%;
+            mix-blend-mode: multiply;
+            filter: blur(150px);
+            opacity: 0.7;
+            animation: blobAmberAnimation 6s infinite;
+        }
+
+        .blobGreen {
+            position: absolute;
+            top: 20rem;
+            right: -8rem;
+            width: 20rem;
+            height: 20rem;
+            background-color: #10B981;
+            border-radius: 50%;
+            mix-blend-mode: multiply;
+            filter: blur(150px);
+            opacity: 0.7;
+            animation: blobGreenAnimation 6s infinite;
+        }
+
+        .blobBlue {
+            position: absolute;
+            top: 30rem;
+            right: -10rem;
+            width: 20rem;
+            height: 20rem;
+            background-color: #3B82F6;
+            border-radius: 50%;
+            mix-blend-mode: multiply;
+            filter: blur(150px);
+            opacity: 0.7;
+            animation: blobBlueAnimation 6s infinite;
+        }
+
+        @keyframes blobPurpleAnimation {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        @keyframes blobAmberAnimation {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        @keyframes blobGreenAnimation {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        @keyframes blobBlueAnimation {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .hero-section {
+            font-family: poppins;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            padding-bottom: 50px;
+        }
+
+        .hero-section .button-wrapper {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .hero-section .button-wrapper .button {
+            padding: 7.5px 15px;
+            text-decoration: none;
+            border-radius: 10px;
+            display: block;
+        }
+
+        .hero-section .button-wrapper .button:nth-child(1) {
+            background-color: #F59E0B;
+            color: white;
+            font-weight: 700;
+        }
+
+        .hero-section .button-wrapper .button:nth-child(2) {
+            background-color: white;
+            border: 3px solid;
+            color: #F59E0B;
+            font-weight: 700;
+        }
+
+        .hero-section h1 {
+            font-size: 8vw;
+        }
+
+        .about-section {
+            position: relative;
+            top: -50px;
+            /* margin: auto; */
+            margin: 0 50px;
+            padding: 3.5rem 4.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #FDE68A;
+            border-radius: 20px;
+            position: relative;
+            /* max-width: 1200px; */
+        }
+
+        @media (min-width: 1400px) {
+            .container {
+                border-radius: 1rem;
+            }
+        }
+
+        .about-section .title-section {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            user-select: none;
+        }
+
+        .about-section .content-section {
+            width: 100%;
+            margin-top: 1rem;
+            font-size: 16px;
+        }
+
+        @media (min-width: 1024px) {
+            .about-section .title-section {
+                width: 40%;
+                justify-content: center;
+            }
+
+            .about-section .content-section {
+                width: 60%;
+                margin-top: 0;
+            }
+        }
+
+        .about-section .title {
+            font-size: 3rem;
+            font-weight: 600;
+            letter-spacing: -3px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .about-section .highlight {
+            color: #D97706;
+        }
+
+        .about-section .content-text {
+            width: 100%;
+            font-family: 'poppins';
+            font-size: 1.1rem;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+
+        .member-section {
+            font-family: 'poppins';
+            margin: 0 50px;
+        }
+
+        .member-section .member-wrapper {
+            width: 100%;
+            padding: 0 3rem;
+        }
+
+        .member-section .member-item {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .member-section .member-item:nth-child(even) {
+            justify-content: end;
+            flex-direction: row-reverse;
+        }
+
+        .member-section .member-item div:nth-child(1) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .member-section .member-item div:nth-child(2) {
+            width: 45%;
+        }
+
+        .member-section .member-item svg {
+            position: absolute;
+            z-index: -1;
+        }
+
+        .member-section .member-item img {
+            position: relative;
+            height: 300px;
+            width: 200px;
+            object-fit: contain;
+            transition: 0.1s ease-out;
+        }
+
+        .link-to-bio:hover img {
+            transform: scale(1.2);
+        }
+
+        .member-section .member-item .nama {
+            font-weight: 600;
+            font-size: 30px;
+            text-wrap: nowrap;
+        }
+
+        .member-section .member-item .nim {
+            font-weight: 500;
+        }
+
+        .member-section .member-item .link {
+            display: flex;
+            font-weight: 600;
+            color: #F59E0B;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+
+        .member-section .member-item .link .arrow svg {
+            color: #F59E0B;
+            width: 15px;
+        }
+
+        .member-section .member-item .link .arrow {
+            padding: 3px;
+            transition: 0.2s ease-out;
+        }
+
+        .link:hover .arrow {
+            margin-left: 10px;
+        }
+
+        .footer-section {
+            font-family: 'poppins';
+            margin: 50px;
+            margin-bottom: 25px;
+            padding: 1.5rem 2.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #FDE68A;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="blobPurple"></div>
+        <div class="blobAmber"></div>
+        <div class="blobGreen"></div>
+        <div class="blobBlue"></div>
+    </div>
+
+    <div class="hero-section">
+        <div>
+            <h1><span style="color: orange;">Kelompok</span> 2</h1>
+            <h2 style="color: lightseagreen;">PeTe i KAI</h3>
+                <h3 style="border-top: 2px solid lightgray; color: rgb(56, 56, 56); margin-bottom: 20px;">PTIK 1A D3
+                </h3>
+        </div>
+    </div>
+
+    <div class="about-section">
+        <div class="title-section">
+            <h1 class="title">Little story <span class="highlight">- About Who us</span></h1>
+        </div>
+        <div class="content-section">
+            <p class="content-text">
+                Pada zaman dahulu, kami hanyalah sekumpulan individu yang terpecah belah, berjalan sendiri-sendiri tanpa
+                arah yang pasti. Masing-masing dari kami hidup dalam dunia yang berbeda, dengan impian dan tujuan yang
+                terpisah. Namun, dalam perjalanan waktu, kesadaran pun muncul. Kami mulai memahami bahwa kebersamaan
+                bisa membuat kami lebih kuat, lebih mampu menghadapi segala tantangan.
+                <br>
+                <br>
+                Akhirnya, kami dipertemukan oleh takdir dan tujuan yang sama. Terbentuklah kelompok kami, bukan hanya
+                sebagai kumpulan orang, tetapi sebagai keluarga yang memiliki tekad untuk saling mendukung dan mencapai
+                impian bersama. Kami hadir untuk melengkapi, memperkuat, dan menumbuhkan satu sama lain, menjadi satu
+                kesatuan yang kokoh dalam menghadapi dunia.
+            </p>
+        </div>
+    </div>
+
+    <div class="member-section">
+        <h1 style="padding: 0 2.25rem; margin: 0 50px;">Anggota Kelompok</h1>
+        <div class="member-wrapper">
+            <div class="member-item">
+                <div>
+                    <img style="left: 20px;" src="./assets/images/farras.png" alt="">
+                    <svg style="height: 350px; width: 350px;" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#F59E0B"
+                            d="M48.7,-45.5C64.8,-32.6,80.8,-16.3,81.1,0.3C81.4,17,66.2,33.9,50,45.8C33.9,57.7,17,64.4,-0.6,65C-18.2,65.7,-36.4,60.1,-50.3,48.3C-64.3,36.4,-74,18.2,-76.5,-2.6C-79.1,-23.4,-74.6,-46.7,-60.7,-59.7C-46.7,-72.7,-23.4,-75.2,-3.5,-71.7C16.3,-68.1,32.6,-58.5,48.7,-45.5Z"
+                            transform="translate(100 100)" />
+                    </svg>
+                </div>
+                <div>
+                    <p class="nama">Farras Fadhil Syafiq</p>
+                    <p class="nim">241511010</p>
+                    <p style="margin: 10px 0;">
+                        Pelindung tim yang mampu menghadapi tantangan dengan tenang dan menjaga keamanan dalam
+                        situasi
+                        sulit.
+                    </p>
+                    <a class="link">
+                        <p>Lihat Biodata</p>
+                        <p class="arrow">
+                            <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path fill="currentColor"
+                                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+                            </svg>
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="member-item">
+                <div>
+                    <img style="left: 00px;" src="./assets/images/arief.png" alt="">
+                    <svg style="height: 350px; width: 350px;" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#F59E0B"
+                            d="M48.7,-45.5C64.8,-32.6,80.8,-16.3,81.1,0.3C81.4,17,66.2,33.9,50,45.8C33.9,57.7,17,64.4,-0.6,65C-18.2,65.7,-36.4,60.1,-50.3,48.3C-64.3,36.4,-74,18.2,-76.5,-2.6C-79.1,-23.4,-74.6,-46.7,-60.7,-59.7C-46.7,-72.7,-23.4,-75.2,-3.5,-71.7C16.3,-68.1,32.6,-58.5,48.7,-45.5Z"
+                            transform="translate(100 100)" />
+                    </svg>
+                </div>
+                <div>
+                    <p class="nama">Arief F-Sa Wijaya</p>
+                    <p class="nim">241511002</p>
+                    <p style="margin: 10px 0;">
+                        Cerdas dan tangkas, Arief selalu satu langkah di depan. Kemampuan analitisnya membuatnya andal
+                        dalam merencanakan strategi dan mengambil keputusan.
+                    </p>
+                    <a class="link" href="./pages/arief/index.html">
+                        <p>Lihat Biodata</p>
+                        <p class="arrow">
+                            <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path fill="currentColor"
+                                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+                            </svg>
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="member-item">
+                <div>
+                    <img style="left: 00px;" src="./assets/images/hilmi.png" alt="">
+                    <svg style="height: 350px; width: 350px;" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#F59E0B"
+                            d="M48.7,-45.5C64.8,-32.6,80.8,-16.3,81.1,0.3C81.4,17,66.2,33.9,50,45.8C33.9,57.7,17,64.4,-0.6,65C-18.2,65.7,-36.4,60.1,-50.3,48.3C-64.3,36.4,-74,18.2,-76.5,-2.6C-79.1,-23.4,-74.6,-46.7,-60.7,-59.7C-46.7,-72.7,-23.4,-75.2,-3.5,-71.7C16.3,-68.1,32.6,-58.5,48.7,-45.5Z"
+                            transform="translate(100 100)" />
+                    </svg>
+                </div>
+                <div>
+                    <p class="nama">Hilmi Mahdani Bilda</p>
+                    <p class="nim">241511013</p>
+                    <p style="margin: 10px 0;">
+                        Ahli strategi yang cerdik dan tenang. Dengan insting tajam dan kepeduliannya, ia menjadi perekat
+                        tim dan menjaga keharmonisan di antara anggota.
+                    </p>
+                    <a class="link" href="./pages/hilmi/index.html">
+                        <p>Lihat Biodata</p>
+                        <p class="arrow">
+                            <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path fill="currentColor"
+                                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+                            </svg>
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="member-item">
+                <div>
+                    <img style="left: 00px;" src="./assets/images/tamam.png" alt="">
+                    <svg style="height: 350px; width: 350px;" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#F59E0B"
+                            d="M48.7,-45.5C64.8,-32.6,80.8,-16.3,81.1,0.3C81.4,17,66.2,33.9,50,45.8C33.9,57.7,17,64.4,-0.6,65C-18.2,65.7,-36.4,60.1,-50.3,48.3C-64.3,36.4,-74,18.2,-76.5,-2.6C-79.1,-23.4,-74.6,-46.7,-60.7,-59.7C-46.7,-72.7,-23.4,-75.2,-3.5,-71.7C16.3,-68.1,32.6,-58.5,48.7,-45.5Z"
+                            transform="translate(100 100)" />
+                    </svg>
+                </div>
+                <div>
+                    <p class="nama">Tamam Hisabullah</p>
+                    <p class="nim">241511027</p>
+                    <p style="margin: 10px 0;">
+                        Sumber semangat bagi tim. Meski santai, ia tangguh dan memiliki kemampuan bertarung yang luar
+                        biasa.
+                    </p>
+                    <a class="link" href="./pages/tamam/Template.html">
+                        <p>Lihat Biodata</p>
+                        <p class="arrow">
+                            <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path fill="currentColor"
+                                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+                            </svg>
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="member-item">
+                <div>
+                    <img style="left: 00px;" src="./assets/images/fawwaz.png" alt="">
+                    <svg style="height: 350px; width: 350px;" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#F59E0B"
+                            d="M48.7,-45.5C64.8,-32.6,80.8,-16.3,81.1,0.3C81.4,17,66.2,33.9,50,45.8C33.9,57.7,17,64.4,-0.6,65C-18.2,65.7,-36.4,60.1,-50.3,48.3C-64.3,36.4,-74,18.2,-76.5,-2.6C-79.1,-23.4,-74.6,-46.7,-60.7,-59.7C-46.7,-72.7,-23.4,-75.2,-3.5,-71.7C16.3,-68.1,32.6,-58.5,48.7,-45.5Z"
+                            transform="translate(100 100)" />
+                    </svg>
+                </div>
+                <div>
+                    <p class="nama">Fawwaz Naufal Anwar</p>
+                    <p class="nim">241511011</p>
+                    <p style="margin: 10px 0;">
+                        Sosok yang gigih dan pantang menyerah. Dengan kekuatan fisik yang luar biasa dan semangat juang
+                        tinggi, ia selalu siap menghadapi rintangan berat dan menjadi tumpuan tim dalam situasi yang
+                        membutuhkan ketahanan maksimal.
+                    </p>
+                    <a class="link" href="./pages/fawwaz/index.html">
+                        <p>Lihat Biodata</p>
+                        <p class="arrow">
+                            <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path fill="currentColor"
+                                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+                            </svg>
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-section" style="display: flex; justify-content: space-between; align-items: end;">
+        <h1>That all of Team 2 - <span style="color: #D97706;">PeTe I KAI 1A</span> JTK D3</h1>
+        <p style="color: gray; font-size: 15px;">*Deskripsi yang ditulis diatas adalah fiksi</p>
+    </div>
+
+    <footer style="text-align: center; color: gray; font-family: poppins; margin-bottom: 25px;">
+        <p>Copyright &copy; <span class="year">2024</span> Farras Fadhil Syafiq. All rights reserved</p>
+    </footer>
+</body>
+
+</html>
